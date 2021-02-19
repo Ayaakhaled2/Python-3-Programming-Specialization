@@ -1,0 +1,97 @@
+📌 Assessment: Files and CSV
+
+Q1) The textfile, travel_plans.txt, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable num.
+
+📌
+file = open('travel_plans.txt','r')
+file_content = file.read()
+num = len(file_content)
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q2) We have provided a file called emotion_words.txt that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable num_words.
+
+📌
+file = open('emotion_words.txt','r')
+file_content = file.read()
+print(file_content)
+file_list = file_content.split()
+print(file_list)
+num_words = 0
+for word in file_list:
+    num_words +=1
+print(num_words)
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q3) Assign to the variable num_lines the number of lines in the file school_prompt.txt.
+
+📌
+file = open('school_prompt.txt','r')
+file_content = file.readlines()
+num_lines = 0
+for line in file_content:
+    num_lines += 1 
+    
+    ------------------------------------------------------------------------------------------------------------------------------------------------
+Q4) Assign the first 30 characters of school_prompt.txt as a string to the variable beginning_chars.
+
+📌
+file = open('school_prompt.txt','r')
+file_content = file.read()
+beginning_chars = file_content[:30]
+    ------------------------------------------------------------------------------------------------------------------------------------------------
+Q5) Challenge: Using the file school_prompt.txt, assign the third word of every line to a list called three.
+
+📌
+# open the file 
+file = open('school_prompt.txt','r')
+#read the file as a list of lines 
+file_content = file.readlines()
+print(file_content)
+three = []
+# iterate over each line in list
+for alist in file_content:
+    #make a list of items for each line 
+    list_of_items = alist.strip().split()
+    print(list_of_items)
+    three.append(list_of_items[2])
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Q6) Challenge: Create a list called emotions that contains the first word of every line in emotion_words.txt.
+
+📌
+file = open('emotion_words.txt','r')
+file_content = file.readlines()
+emotions = [] 
+for each_line in file_content:
+    alist = each_line.strip().split()
+    print(alist)
+    
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q7) Assign the first 33 characters from the textfile, travel_plans.txt to the variable first_chars.
+
+📌
+file = open('travel_plans.txt','r')
+file_content = file.read()
+
+first_chars = file_content[:33]
+    emotions.append(alist[0])
+    
+    
+ ------------------------------------------------------------------------------------------------------------------------------------------------
+Q8) Challenge: Using the file school_prompt.txt, if the character ‘p’ is in a word, then add the word to a list called p_words.
+
+📌
+file = open('school_prompt.txt','r')
+
+p_words = []
+for line in file: 
+    alist = line.strip().split()
+    for item in alist:
+        if 'p' in item:
+            p_words.append(item)
+-----------------------------------------------------------------------------------------------------------------------------------------------------  
+-----------------------------
+-  Score: 8.0 of 8 = 100.0% -
+-----------------------------
